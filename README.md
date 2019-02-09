@@ -36,4 +36,21 @@ There are two way to do this.
 After you will create an .ssh directory and within the directory a authorized_keys file
 where all of the grader's authorized keys will be stored.
 
-2.
+2. Add the private key to the authorized_keys file stored at `/home/grader/.ssh/authorized_keys` 
+
+### Next configure and enable the uncomplicated firewall(ufw)
+
+1. `sudo apt-get ufw` # install ufw 
+2. `sudo ufw allow 2200`
+3. `sudo allow www`
+4. `sudo allow ufw 123`
+5. `sudo allow ufw http`
+6. `sudo ufw enable`
+7. `sudo ufw status` # to check the status of the firewall
+
+
+### Modify the sshd_config file to only allow ssh into the 2200 port
+
+* `cd /etc/ssh`
+* ` sudo nano sshd_config` # edit line 5 so that it reads Port 2200 instead of 22
+* Also change PermitRootLogin to 'no' instead of 'prohibit-password' 
