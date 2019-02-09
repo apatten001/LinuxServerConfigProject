@@ -90,7 +90,7 @@ application.secret_key = "secretKey"
 ```
 <VirtualHost *:80>
    ServerName 18.234.230.88
-   ServerAdmin apatten001@yahoo.com
+   ServerAdmin <name>@email.com
    WSGIDaemonProcess catalog user=ubuntu group=ubuntu threads=2
    WSGIScriptAlias / /var/www/catalog/catalog.wsgi
    DocumentRoot /var/www/catalog/catalog
