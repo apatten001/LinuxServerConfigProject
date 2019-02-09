@@ -2,7 +2,7 @@
 
 ### IP address and SSH port
 1. **Public IP address:** 34.233.120.191 **SSH port:** 2200
-2. **URL of the hosted web app:** 
+2. **URL of the hosted web app:** 34.233.120.191 or 
 
 
 ### Software Installed
@@ -57,12 +57,12 @@ where all of the grader's authorized keys will be stored.
 * ` sudo nano sshd_config` # edit line 5 so that it reads Port 2200 instead of 22
 * Also change PermitRootLogin to 'no' instead of 'prohibit-password' 
 
-### Install stack for the project Apache2 WSGI Python3 pip
+### Install stack for the project Apache2 WSGI Python3 Postgresql
 
 1. `sudo apt-get install apache2`
 2. `sudo apt-get install libapache2-mod-wsgi-py3`
 3. `sudo apt-get install python3`
-4. `sudo apt-get install pyhon3-pip`
+4. `sudo apt-get install postgresql`
 5. `sudo apt-get install git` # to clone project from repository
 
 ### Create WSGI conf file
@@ -120,4 +120,15 @@ application.secret_key = "secretKey"
      CustomLog ${APACHE_LOG_DIR}/access.log combined
   </VirtualHost>
 ```
+**Enable catalog.conf**
+```
+grader@ip-172-26-10-175:/etc/apache2/sites-available$ sudo a2ensite catalog.conf
+Site catalog already enabled
+```
 
+
+#### Next we want to install all requirements for the catalog app
+
+1. `pip3 freeze` #where the project is to see all if the dependecies
+2. save this to requirements.txt file to so you can read these files to install
+3. `pip3 install -r requiremets.txt` uploads all the required dependencies
