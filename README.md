@@ -2,7 +2,7 @@
 
 ### IP address and SSH port
 1. **Public IP address:** 34.233.120.191 **SSH port:** 2200
-2. **URL of the hosted web app:** 34.233.120.191 or 
+2. **URL of the hosted web app:** [Catalog Project](34.233.120.191) 
 
 
 ### Software Installed
@@ -92,10 +92,10 @@ application.secret_key = "secretKey"
    ServerName 18.234.230.88
    ServerAdmin <name>@email.com
    WSGIDaemonProcess catalog user=ubuntu group=ubuntu threads=2
-   WSGIScriptAlias / /var/www/catalog/catalog.wsgi
+   WSGIScriptAlias / /var/www/catalog_project/catalog.wsgi
    DocumentRoot /var/www/catalog/catalog
-   <Directory /var/www/catalog/catalog>
-     WSGIProcessGroup catalog
+   <Directory /var/www/catalog_project/>
+     WSGIProcessGroup catalog_project
      WSGIApplicationGroup %{GLOBAL}
      <IfVersion < 2.4>
         Order allow,deny
@@ -105,8 +105,8 @@ application.secret_key = "secretKey"
         Require all granted
       </IfVersion>
    </Directory>
-   Alias "/static/" "/var/www/catalog/catalog/static/"
-   <Directory /var/www/catalog/catalog/static/>
+   Alias "/static/" "/var/www/catalog_project/static/"
+   <Directory /var/www/catalog_project/static/>
      <IfVersion < 2.4>
         Order allow,deny
         Allow from all
@@ -119,7 +119,16 @@ application.secret_key = "secretKey"
      LogLevel info
      CustomLog ${APACHE_LOG_DIR}/access.log combined
   </VirtualHost>
+  
 ```
+
+#### Next we want to install all requirements for the catalog app
+
+1. `pip3 freeze` #where the project is to see all if the dependecies
+2. save this to requirements.txt file to so you can read these files to install
+3. `pip3 install -r requiremets.txt` uploads all the required dependencies
+
+
 **Enable catalog.conf**
 ```
 grader@ip-172-26-10-175:/etc/apache2/sites-available$ sudo a2ensite catalog.conf
@@ -127,8 +136,4 @@ Site catalog already enabled
 ```
 
 
-#### Next we want to install all requirements for the catalog app
 
-1. `pip3 freeze` #where the project is to see all if the dependecies
-2. save this to requirements.txt file to so you can read these files to install
-3. `pip3 install -r requiremets.txt` uploads all the required dependencies
