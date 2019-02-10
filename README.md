@@ -5,6 +5,12 @@
 2. **URL of the hosted web app:** [Catalog Project](http://34.233.120.191) 
 
 
+
+### Create an account for AWS lightsail and create an instance.
+
+![](https://github.com/apatten001/LinuxServerConfigProject/blob/master/Server.png)
+
+
 ### Software Installed
 1. python3-pip
 2. apache2
