@@ -16,7 +16,7 @@
 ### Server Configuration Update and Upgrade
 Commands used:
 1. sudo `apt-get update`
-2. `sudo apt-get dist-upgrade`
+2. `sudo apt-get upgrade`
 
 
 ### Update timezone to UTC
@@ -43,11 +43,11 @@ where all of the grader's authorized keys will be stored.
 ### Next configure and enable the uncomplicated firewall(ufw)
 
 1. `sudo apt-get install ufw` # install ufw 
-2. `sudo ufw allow 2200`
-3. `sudo allow www`
-4. `sudo allow ufw 123`
-5. `sudo allow ufw http`
-6. `sudo ufw enable`
+2. `sudo ufw allow 2200` # open 2200 port  
+3. `sudo deny 22` # deny port 22
+4. `sudo allow ufw 123` #open port 123
+5. `sudo allow ufw http` #open port 80
+6. `sudo ufw enable` # complete changes to the port
 7. `sudo ufw status` # to check the status of the firewall
 
 
