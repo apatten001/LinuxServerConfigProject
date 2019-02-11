@@ -141,5 +141,7 @@ grader@ip-172-26-10-175:/etc/apache2/sites-available$ sudo a2ensite catalog.conf
 Site catalog already enabled
 ```
 
+### Third party resources
 
+[FLask wgsi documentation](https://www.bogotobogo.com/python/Flask/Python_Flask_HelloWorld_App_with_Apache_WSGI_Ubuntu14.php)
 
