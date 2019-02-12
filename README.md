@@ -95,11 +95,11 @@ application.secret_key = "secretKey"
 3. add the following
 ```
 <VirtualHost *:80>
-   ServerName 18.234.230.88
+   ServerName 34.238.183.5
    ServerAdmin <name>@email.com
    WSGIDaemonProcess catalog user=ubuntu group=ubuntu threads=2
    WSGIScriptAlias / /var/www/catalog_project/catalog.wsgi
-   DocumentRoot /var/www/catalog/catalog
+   DocumentRoot /var/www/catalog_project/catalog
    <Directory /var/www/catalog_project/>
      WSGIProcessGroup catalog_project
      WSGIApplicationGroup %{GLOBAL}
