@@ -141,7 +141,10 @@ grader@ip-172-26-10-175:/etc/apache2/sites-available$ sudo a2ensite catalog.conf
 Site catalog already enabled
 ```
 
+
 ### Third party resources
 
-[FLask wgsi documentation](https://www.bogotobogo.com/python/Flask/Python_Flask_HelloWorld_App_with_Apache_WSGI_Ubuntu14.php)
+1. [Flask deployment domentation](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/#creating-a-wsgi-file)
+2. [Digital Ocean's deploy Flask app](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
+
 
