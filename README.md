@@ -1,6 +1,7 @@
 # LinuxServerConfigProject
 
 ### IP address and SSH port
+(This IP address is no longer active on AWS)
 1. **Public IP address:** 34.238.183.5 **SSH port:** 2200
 2. **URL of the hosted web app:** [Catalog Project](http://34.238.183.5) 
 
